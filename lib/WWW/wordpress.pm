@@ -15,7 +15,7 @@ use JSON qw( decode_json );
 use URI;
 use Data::Dumper;
 
-our $VERSION = '1.0';
+our $VERSION = '1.1';
 
 ###### default values #####
 use constant WORDPRESS_URL => 'https://public-api.wordpress.com/rest/v1/';
@@ -202,11 +202,9 @@ WWW::wordpress - wordpress API interface .
 
 Usage:
 
-use www::wordpress;
-
-$ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
-
-my $wordpress = www::wordpress->new( blog => 'blog.wordpress.com',
+   use www::wordpress;
+   $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
+   my $wordpress = www::wordpress->new( blog => 'blog.wordpress.com',
 					blog_id => '00000',
 					access_token => 'XXXXX');					
 
@@ -230,52 +228,52 @@ http://developer.wordpress.com/docs/oauth2/#receiving-an-access-token
 
 =head2 site_info
 
-$site_info = $wordpress->site_info;
-$post_count = $site_info->{post_count};
-$subscribers_count = $site_info->{subscribers_count};
-print "post_count $post_count \n";
-print "subscribers_count $subscribers_count \n";
+    $site_info = $wordpress->site_info;
+    $post_count = $site_info->{post_count};
+    $subscribers_count = $site_info->{subscribers_count};
+    print "post_count $post_count \n";
+    print "subscribers_count $subscribers_count \n";
 
 stats of the site.
 
 =head2 post
 
-$content = "this is my test body ";
-$title = "new title";
-$tags = "linux";
-my $post_data = { content => $content,title => $title,tags => $tags };
-$post_info = $wordpress->post(post_data => $post_data );
-$id = $post_info->{id};
-$URL = $post_info->{URL};
-print "id $id URL $URL  \n";
+    $content = "this is my test body ";
+    $title = "new title";
+    $tags = "linux";
+    my $post_data = { content => $content,title => $title,tags => $tags };
+    $post_info = $wordpress->post(post_data => $post_data );
+    $id = $post_info->{id};
+    $URL = $post_info->{URL};
+    print "id $id URL $URL  \n";
 
 
 Post an article
 
 =head2 edit_post
 
-$new_content = "Edited test";
-$post_id = 19;
+    $new_content = "Edited test";
+    $post_id = 19;
 
-my $post_data = { content => $new_content};
-$status = $wordpress->edit_post(post_data => $post_data, post_id => $post_id);
-print "status $status \n";
+    my $post_data = { content => $new_content};
+    $status = $wordpress->edit_post(post_data => $post_data, post_id => $post_id);
+    print "status $status \n";
 
-Edit a post by id
+Edit a post by post id
 
 =head2 follow
 
-my $post_data = { pretty => 1};
-$status = $wordpress->follow(blog => 'blog.wordpress.com',post_data => $post_data);  
-print "status $status \n";
+    my $post_data = { pretty => 1};
+    $status = $wordpress->follow(blog => 'blog.wordpress.com',post_data => $post_data);  
+    print "status $status \n";
 
 Follow another blog
    
 =head2 unfollow
 
-my $post_data = { pretty => 1};
-$status = $wordpress->unfollow(blog => 'blog.wordpress.com',post_data => $post_data);  
-print "status $status \n";
+    my $post_data = { pretty => 1};
+    $status = $wordpress->unfollow(blog => 'blog.wordpress.com',post_data => $post_data);  
+    print "status $status \n";
 
 Unfollow blog
    

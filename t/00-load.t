@@ -7,7 +7,7 @@ use Test::More;
 plan tests => 1;
 
 BEGIN {
-    use_ok( 'WWW::wordpress' ) || print "Bail out!\n";
+    use_ok( 'WWW::Wordpress' ) || print "Bail out!\n";
 }
 
-diag( "Testing WWW::wordpress $WWW::wordpress::VERSION, Perl $], $^X" );
+diag( "Testing WWW::Wordpress $WWW::Wordpress::VERSION, Perl $], $^X" );

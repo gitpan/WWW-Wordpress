@@ -1,4 +1,4 @@
-WWW-wordpress
+WWW-Wordpress
 
 The README is used to introduce the module and provide instructions on
 how to install the module, any machine dependencies it may have (for
@@ -30,21 +30,21 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc WWW::wordpress
+    perldoc WWW::Wordpress
 
 You can also look for information at:
 
     RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-wordpress
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-Wordpress
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/WWW-wordpress
+        http://annocpan.org/dist/WWW-Wordpress
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/WWW-wordpress
+        http://cpanratings.perl.org/d/WWW-Wordpress
 
     Search CPAN
-        http://search.cpan.org/dist/WWW-wordpress/
+        http://search.cpan.org/dist/WWW-Wordpress/
 
 
 LICENSE AND COPYRIGHT

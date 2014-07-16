@@ -6,10 +6,10 @@ use warnings FATAL => 'all';
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME             => 'WWW::wordpress',
-    DISTNAME		 => 'www-wordpress',
-    VERSION_FROM     => 'lib/WWW/wordpress.pm',
-    ABSTRACT   		 => 'wordpress API interface',
+    NAME             => 'WWW::Wordpress',
+    DISTNAME		 => 'WWW-Wordpress',
+    VERSION_FROM     => 'lib/WWW/Wordpress.pm',
+    ABSTRACT   		 => 'Wordpress API interface',
     AUTHOR           => q{Daniel Torres <daniel.torres@owasp.org>},  
     LICENSE          => 'Artistic_2_0',
     PL_FILES         => {},
@@ -23,5 +23,5 @@ WriteMakefile(
         'URI' => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean => { FILES => 'WWW-wordpress-*' },
+    clean => { FILES => 'WWW-Wordpress-*' },
 );

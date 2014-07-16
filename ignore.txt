@@ -14,5 +14,5 @@ inc/
 nytprof.out
 pod2htm*.tmp
 pm_to_blib
-WWW-wordpress-*
-WWW-wordpress-*.tar.gz
+WWW-Wordpress-*
+WWW-Wordpress-*.tar.gz

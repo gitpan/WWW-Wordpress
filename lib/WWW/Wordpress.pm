@@ -15,10 +15,10 @@ use JSON qw( decode_json );
 use URI;
 use Data::Dumper;
 
-our $VERSION = '1.2';
+our $VERSION = '1.3';
 
 ###### default values #####
-use constant WORDPRESS_URL => 'https://public-api.wordpress.com/rest/v1/';
+use constant WORDPRESS_URL => 'https://public-api.Wordpress.com/rest/v1/';
 $Net::HTTPS::SSL_SOCKET_CLASS = "Net::SSL"; # Force use of Net::SSL for proxy compatibility
 ##############################
 
@@ -194,7 +194,7 @@ __END__
 
 =head1 NAME
 
-WWW::Wordpress - wordpress API interface .
+WWW::Wordpress - Wordpress API interface .
 
 
 =head1 SYNOPSIS
@@ -204,7 +204,7 @@ Usage:
 
    use WWW::Wordpress;
    $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
-   my $wordpress = WWW::Wordpress->new( blog => 'blog.wordpress.com',
+   my $wordpress = WWW::Wordpress->new( blog => 'blog.Wordpress.com',
 					blog_id => '00000',
 					access_token => 'XXXXX');					
 
@@ -212,19 +212,19 @@ Usage:
 
 =head1 DESCRIPTION
 
-wordpress API interface
+Wordpress API interface
 
 =head1 FUNCTIONS
 
 =head2 constructor
 
-    my $wordpress = WWW::Wordpress->new( blog => 'blog.wordpress.com',
+    my $wordpress = WWW::Wordpress->new( blog => 'blog.Wordpress.com',
 					blog_id => '00000',
 					access_token => 'XXXXX');	
 
 To get your Access Token check
 
-http://developer.wordpress.com/docs/oauth2/#receiving-an-access-token
+http://developer.Wordpress.com/docs/oauth2/#receiving-an-access-token
 
 =head2 site_info
 
@@ -264,7 +264,7 @@ Edit a post by post id
 =head2 follow
 
     my $post_data = { pretty => 1};
-    $status = $wordpress->follow(blog => 'blog.wordpress.com',post_data => $post_data);  
+    $status = $wordpress->follow(blog => 'blog.Wordpress.com',post_data => $post_data);  
     print "status $status \n";
 
 Follow another blog
@@ -272,7 +272,7 @@ Follow another blog
 =head2 unfollow
 
     my $post_data = { pretty => 1};
-    $status = $wordpress->unfollow(blog => 'blog.wordpress.com',post_data => $post_data);  
+    $status = $wordpress->unfollow(blog => 'blog.Wordpress.com',post_data => $post_data);  
     print "status $status \n";
 
 Unfollow blog

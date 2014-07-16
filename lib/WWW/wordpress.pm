@@ -1,7 +1,7 @@
 # Copyleft 2014 Daniel Torres 
 # daniel.torres at owasp.org
 # All rights released.
-package WWW::wordpress;
+package WWW::Wordpress;
 
 
 use strict;
@@ -15,7 +15,7 @@ use JSON qw( decode_json );
 use URI;
 use Data::Dumper;
 
-our $VERSION = '1.1';
+our $VERSION = '1.2';
 
 ###### default values #####
 use constant WORDPRESS_URL => 'https://public-api.wordpress.com/rest/v1/';
@@ -194,7 +194,7 @@ __END__
 
 =head1 NAME
 
-WWW::wordpress - wordpress API interface .
+WWW::Wordpress - wordpress API interface .
 
 
 =head1 SYNOPSIS
@@ -202,9 +202,9 @@ WWW::wordpress - wordpress API interface .
 
 Usage:
 
-   use www::wordpress;
+   use WWW::Wordpress;
    $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
-   my $wordpress = www::wordpress->new( blog => 'blog.wordpress.com',
+   my $wordpress = WWW::Wordpress->new( blog => 'blog.wordpress.com',
 					blog_id => '00000',
 					access_token => 'XXXXX');					
 
@@ -218,7 +218,7 @@ wordpress API interface
 
 =head2 constructor
 
-    my $wordpress = www::wordpress->new( blog => 'blog.wordpress.com',
+    my $wordpress = WWW::Wordpress->new( blog => 'blog.wordpress.com',
 					blog_id => '00000',
 					access_token => 'XXXXX');	
 
